@@ -23,6 +23,27 @@ headers.append("Content-Type", "application/json");
  *  a promise that resolves to the `json` data or an error.
  *  If the response is not in the 200 - 399 range the promise is rejected.
  */
+
+export async function listObservations(signal) {
+  const url = `${API_BASE_URL}/observations`;
+  const options = {
+    headers,
+    signal,
+  };
+  return await fetchJson(url, options);
+}
+
+export async function createObservation(observation, signal) {
+  const url = `${API_BASE_URL}/observations`;
+  const options = {
+    method: "POST",
+    headers,
+    body: JSON.stringify({ data: observation }),
+    signal,
+  };
+  return await fetchJson(url, options);
+}
+
 async function fetchJson(url, options) {
   try {
     const response = await fetch(url, options);
