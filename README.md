@@ -1,5 +1,7 @@
 # WeatherZen Front End Application
 
+Frontend for Weatherzen application. Weatherzen is an application that crowd sources local weather observations. Unedited after forking, except updated README, utilized to understand how to connect the backend with the frontend through Thinkful program.
+
 ## Installation
 
 1. Fork / clone this repository.
